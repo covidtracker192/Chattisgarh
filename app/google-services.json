@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "57383986661",
+    "firebase_url": "https://chattisgarh-ffe99.firebaseio.com",
+    "project_id": "chattisgarh-ffe99",
+    "storage_bucket": "chattisgarh-ffe99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57383986661:android:f4f29ade6ab0fcff29bb0c",
+        "android_client_info": {
+          "package_name": "com.covid19.chattisgarh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57383986661-m33fpvvorrs58r2ke8u5cptakk2ft1fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Z7bksq6qOAdfB2qAh_h43ZpHGS-C1Xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57383986661-m33fpvvorrs58r2ke8u5cptakk2ft1fc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
