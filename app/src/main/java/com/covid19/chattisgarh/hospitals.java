@@ -1,8 +1,11 @@
 package com.covid19.chattisgarh;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
@@ -48,76 +51,65 @@ public class hospitals extends FragmentActivity implements OnMapReadyCallback {
         mLocationRequest.setInterval(180000);
         mLocationRequest.setFastestInterval(90000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
         mMap.setMyLocationEnabled(true);
 
         // Test Center 1
-        final LatLng center1 = new LatLng(15.462846, 73.857513);
-        mMap.addMarker(new MarkerOptions().position(center1).title("Goa Medical College & Hospital").snippet("website: http://www.gmc.goa.gov.in/index.php/en/"));
+        final LatLng center1 = new LatLng(21.465585, 81.725095);
+        mMap.addMarker(new MarkerOptions().position(center1).title("Dept of Lab services, Balco Medical Centre (Vedanta Medical Research Foundation, Uparwara, Chhattisgarh ").snippet("Phone Number: 077122 37575"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(center1));
 
         //Test Center 2
-        final LatLng center2 = new LatLng(15.596924, 73.820260);
-        mMap.addMarker(new MarkerOptions().position(center2).title("District Hospital, Mapusa").snippet("website: http://www.dhsgoa.gov.in/tel-nos.htm"));
+        final LatLng center2 = new LatLng(21.383768, 81.601194);
+        mMap.addMarker(new MarkerOptions().position(center2).title("Regional Leprosy Training and Research Institute, Lalpur, Raipur (Chhattisgarh) under Govt. of India, Ministry of Health and Family Welfare, Raipur, Chhattisgarh ").snippet("Phone Number: 077124 12792"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(center2));
 
         //Test Center 3
-        final LatLng center3 = new LatLng(15.605917, 73.813276);
-        mMap.addMarker(new MarkerOptions().position(center3).title("Dr. Kolwalkar's Galaxy Hospital").snippet("website: http://galaxyhospitalgoa.com/"));
+        final LatLng center3 = new LatLng(21.507050, 81.635580);
+        mMap.addMarker(new MarkerOptions().position(center3).title("Pt. Jawahar Lal Nehru Memorial Medical College, Raipur, Chhattisgarh ").snippet("Phone Number: 077125 23919"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(center3));
 
         //Test Center 4
-        final LatLng center4 = new LatLng(15.268915, 73.965600);
-        mMap.addMarker(new MarkerOptions().position(center4).title("Victor Hospital").snippet("website: http://victorhospital.com/"));
+        final LatLng center4 = new LatLng(21.465585, 81.644447);
+        mMap.addMarker(new MarkerOptions().position(center4).title("MMI Narayana Multispeciality Hospital, Raipur, Chhattisgarh").snippet("Phone Number: 080675 06880"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(center4));
 
         //Test Center 5
-        final LatLng center5 = new LatLng(15.460034, 73.813516);
-        mMap.addMarker(new MarkerOptions().position(center5).title("Manipal Hospitals Goa").snippet("website: https://www.manipalhospitals.com/goa/"));
+        final LatLng center5 = new LatLng(21.608755, 81.650920);
+        mMap.addMarker(new MarkerOptions().position(center5).title("AIIMS RAIPUR").snippet("Phone Number: 077125 72240"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(center5));
-
-        //Test Center 6
-        final LatLng center6 = new LatLng(15.604626, 73.820396);
-        mMap.addMarker(new MarkerOptions().position(center6).title("Vision Hospital in Mapusa Goa").snippet("website: https://visionhospitalgoa.com/"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(center6));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(6));
-
-        //Test Center 7
-        final LatLng center7 = new LatLng(15.597050, 73.820198);
-        mMap.addMarker(new MarkerOptions().position(center7).title("Asilo Hospital"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(center7));
 
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
                 if(marker.getPosition().equals(center1)) {
-                    Uri uriUrl = Uri.parse("http://www.gmc.goa.gov.in/index.php/en/");
+                    Uri uriUrl = Uri.parse("https://balcomedicalcentre.com/");
                     Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                     startActivity(launchBrowser);
                 }
                 else if(marker.getPosition().equals(center2)) {
-                    Uri uriUrl = Uri.parse("http://www.dhsgoa.gov.in/tel-nos.htm");
+                    Uri uriUrl = Uri.parse("http://rltrird.cg.gov.in/");
                     Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                     startActivity(launchBrowser);
                 }
 
                 else if(marker.getPosition().equals(center3)) {
-                    Uri uriUrl = Uri.parse("http://galaxyhospitalgoa.com/");
+                    Uri uriUrl = Uri.parse("https://ptjnmcraipur.in/");
                     Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                     startActivity(launchBrowser);
                 }
                 else if(marker.getPosition().equals(center4)) {
-                    Uri uriUrl = Uri.parse("http://victorhospital.com/");
-                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-                    startActivity(launchBrowser);
-                }
-                else if(marker.getPosition().equals(center5)) {
-                    Uri uriUrl = Uri.parse("https://www.manipalhospitals.com/goa/");
-                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-                    startActivity(launchBrowser);
-                }
-                else if(marker.getPosition().equals(center6)) {
-                    Uri uriUrl = Uri.parse("https://visionhospitalgoa.com/");
+                    Uri uriUrl = Uri.parse("https://www.narayanahealth.org/hospitals/raipur/mmi-narayana-multispeciality-hospital?utm_source=mmi-narayana-multispeciality-hospital&utm_medium=GMB_Hospital&utm_campaign=Organic");
                     Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                     startActivity(launchBrowser);
                 }

@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "57383986661-i9vjk7cmovvqgtj1s4a9ndmapo4f89rl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.covid19.chattisgarh",
+            "certificate_hash": "b2bd4e25a05d93b7d972d6159359b108c6339f05"
+          }
+        },
+        {
+          "client_id": "57383986661-nspatlj5gra63soo8qbvp9qi4ies25ms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.covid19.chattisgarh",
+            "certificate_hash": "423cc1b7b474d761f16f68a8e3345bda1027bd42"
+          }
+        },
+        {
           "client_id": "57383986661-m33fpvvorrs58r2ke8u5cptakk2ft1fc.apps.googleusercontent.com",
           "client_type": 3
         }

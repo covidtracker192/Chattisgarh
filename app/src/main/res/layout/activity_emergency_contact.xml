@@ -32,7 +32,7 @@
                 android:id="@+id/textView38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="\nGoa Helpline Number (including quarantine violations)"
+                android:text="\nChattisgarh Helpline Number (including quarantine violations)"
                 android:textAlignment="center"
                 android:textColor="#FF0000"
                 android:textSize="30sp" />
@@ -41,7 +41,7 @@
                 android:id="@+id/textView39"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="104"
+                android:text="+91 104"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -63,40 +63,6 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView42"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="\nFood Helpline Number(North Goa)"
-                android:textAlignment="center"
-                android:textColor="#FF0000"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="+919423890077"
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView44"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="\nFood Helpline Number(South Goa)"
-                android:textAlignment="center"
-                android:textColor="#FF0000"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/textView45"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="+919423890066"
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <TextView
                 android:id="@+id/textView46"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,7 +75,7 @@
                 android:id="@+id/textView47"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="https://www.mohfw.gov.in"
+                android:text="http://gad.cg.gov.in/cgcorona/"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 

@@ -37,34 +37,13 @@ public class emergency_contact extends AppCompatActivity {
             }
         });
 
-        TextView fhnn;
-        fhnn=findViewById(R.id.textView43);
-        fhnn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:+919423890077"));
-                startActivity(intent);
-            }
-        });
-
-        TextView fhns;
-        fhns=findViewById(R.id.textView45);
-        fhns.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:+919423890066"));
-                startActivity(intent);
-            }
-        });
 
         TextView web;
         web=findViewById(R.id.textView47);
         web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uriUrl = Uri.parse("https://www.mohfw.gov.in");
+                Uri uriUrl = Uri.parse("http://gad.cg.gov.in/cgcorona/");
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);
             }
